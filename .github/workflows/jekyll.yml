@@ -15,7 +15,7 @@ jobs:
     - name: Build the site in the jekyll/builder container
     - run: |
         docker run \
-        gem install jekyll-theme-cayman
+        gem install jekyll-theme-cayman run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
         
