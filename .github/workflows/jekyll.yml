@@ -12,9 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run:  gem install jekyll-theme-cayman run \
+    - uses: actions/checkout@v2
     - name: Build the site in the jekyll/builder container
-    - run: |
-        gem install jekyll-theme-cayman run \
     - run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
