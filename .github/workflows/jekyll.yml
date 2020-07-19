@@ -1,5 +1,4 @@
-name: Barath G D Krishnan 
-
+name: Jekyll site CI
 on:
   push:
     branches: [ master ]
